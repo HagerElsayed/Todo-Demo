@@ -1,0 +1,29 @@
+
+    <% include ../partial/header.ejs %>
+    <h1><%= title %></h1>
+
+     <table class="table table-bordered">
+       <tr>
+          <td>Title</td>
+          <td colspan="3">Action</td>
+       </tr>
+    <%
+    currentUser.forEach((user)=>{
+      console.log(user['done']);
+        %>
+
+        <tr>
+
+            <td><%= user['title'] %></td>
+            <td><a href="/users/status/<%= user['_id'] %>" class="btn btn-info"><%=staues=user['done']?"Done":"Mark as completed"%></a></td>
+            <td><a href="/users/delete/<%= user['_id'] %>"  class="btn btn-warning">Delete</a></td>
+            <td><a href="/users/edit/<%= user['_id'] %>" class="btn btn-primary">Update</a></td>
+        </tr>
+
+
+        <%
+    })
+    %>
+    </table>
+
+    <% include ../partial/footer.ejs %>

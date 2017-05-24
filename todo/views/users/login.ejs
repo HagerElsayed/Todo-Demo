@@ -1,0 +1,21 @@
+
+    <% include ../partial/header.ejs %>
+    <h1><%= title %></h1>
+    <form method="post" action="">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" name="email" id="exampleInputEmail1" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password">
+  </div>
+
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" name="remmeber"> remember me
+    </label>
+  </div>
+  <input type="submit" class="btn btn-warning" value="Login">
+</form>
+    <% include ../partial/footer.ejs %>
